@@ -32,7 +32,7 @@ export function Marquee() {
       <div
         className="flex items-center whitespace-nowrap"
         style={{
-          animation: 'marquee-run 38s linear infinite',
+          animation: 'marquee-run 20s linear infinite',
           willChange: 'transform',
         }}
       >
