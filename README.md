@@ -2,11 +2,11 @@
 
 Bienvenido a mi primer repositorio en GitHub.
 
-## Descripcion
+## Descripción
 
 Este es un proyecto de ejemplo para aprender a usar Git y GitHub.
 
-## Como empezar
+## Cómo empezar
 
 1. Clona el repositorio
 2. Explora los archivos
