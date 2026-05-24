@@ -106,12 +106,12 @@ export function ProductGallery({ images, title }: ProductGalleryProps) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 cursor-zoom-out p-4"
+            className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/90 cursor-zoom-out p-4"
             onClick={() => setZoomed(false)}
           >
             <button
               onClick={() => setZoomed(false)}
-              className="absolute top-4 right-4 flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-white hover:bg-white/20 transition-colors"
+              className="absolute top-4 right-4 z-[10000] flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-white hover:bg-white/20 transition-colors"
             >
               <X size={18} />
             </button>
