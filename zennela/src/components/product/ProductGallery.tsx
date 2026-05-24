@@ -134,9 +134,10 @@ export function ProductGallery({ images, title }: ProductGalleryProps) {
                 <Image
                   src={images[active].url}
                   alt={images[active].altText ?? title}
-                  width={900}
-                  height={900}
-                  sizes="88vw"
+                  width={1800}
+                  height={1800}
+                  quality={95}
+                  sizes="(max-width: 768px) 95vw, 85vw"
                   className="object-contain max-h-[88vh] max-w-[88vw] w-auto h-auto rounded-xl"
                 />
               </motion.div>
