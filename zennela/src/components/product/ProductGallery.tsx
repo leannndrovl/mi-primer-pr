@@ -1,6 +1,7 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { createPortal } from 'react-dom'
 import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 import { X } from 'lucide-react'
@@ -15,6 +16,9 @@ interface ProductGalleryProps {
 export function ProductGallery({ images, title }: ProductGalleryProps) {
   const [active, setActive] = useState(0)
   const [zoomed, setZoomed] = useState(false)
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => { setMounted(true) }, [])
 
   if (images.length === 0) {
     return <div className="aspect-square w-full rounded-2xl bg-zen-100" />
@@ -99,43 +103,48 @@ export function ProductGallery({ images, title }: ProductGalleryProps) {
         </div>
       </div>
 
-      {/* ── Lightbox ── */}
-      <AnimatePresence>
-        {zoomed && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/90 cursor-zoom-out p-4"
-            onClick={() => setZoomed(false)}
-          >
-            <button
-              onClick={() => setZoomed(false)}
-              className="absolute top-4 right-4 z-[10000] flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-white hover:bg-white/20 transition-colors"
-            >
-              <X size={18} />
-            </button>
-
+      {/* ── Lightbox via Portal (evita stacking context del sticky container) ── */}
+      {mounted && createPortal(
+        <AnimatePresence>
+          {zoomed && (
             <motion.div
-              initial={{ scale: 0.92, opacity: 0 }}
-              animate={{ scale: 1,    opacity: 1 }}
-              exit={{ scale: 0.92,    opacity: 0 }}
-              transition={{ duration: 0.2 }}
-              className="flex items-center justify-center"
-              onClick={(e) => e.stopPropagation()}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              style={{ position: 'fixed', inset: 0, zIndex: 99999 }}
+              className="flex items-center justify-center bg-black/90 cursor-zoom-out p-4"
+              onClick={() => setZoomed(false)}
             >
-              <Image
-                src={images[active].url}
-                alt={images[active].altText ?? title}
-                width={900}
-                height={900}
-                sizes="88vw"
-                className="object-contain max-h-[88vh] max-w-[88vw] w-auto h-auto rounded-xl"
-              />
+              <button
+                onClick={() => setZoomed(false)}
+                style={{ position: 'absolute', top: 16, right: 16, zIndex: 100000 }}
+                className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-white hover:bg-white/20 transition-colors"
+              >
+                <X size={18} />
+              </button>
+
+              <motion.div
+                initial={{ scale: 0.92, opacity: 0 }}
+                animate={{ scale: 1,    opacity: 1 }}
+                exit={{ scale: 0.92,    opacity: 0 }}
+                transition={{ duration: 0.2 }}
+                className="flex items-center justify-center"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <Image
+                  src={images[active].url}
+                  alt={images[active].altText ?? title}
+                  width={900}
+                  height={900}
+                  sizes="88vw"
+                  className="object-contain max-h-[88vh] max-w-[88vw] w-auto h-auto rounded-xl"
+                />
+              </motion.div>
             </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+          )}
+        </AnimatePresence>,
+        document.body
+      )}
     </>
   )
 }
