@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-bg:           #FDFAFF;
+    --color-surface:      #F5EEFF;
+    --color-border:       #EAD8F8;
+    --color-text:         #3A2D5C;
+    --color-muted:        #9278B8;
+    --color-accent:       #D4B8F0;
+    --color-accent-light: #F0E8FC;
+    /* Product pastel colors */
+    --pastel-pink:   #F9C4D4;
+    --pastel-purple: #D4B8F0;
+    --pastel-mint:   #B8E0D4;
+    --pastel-blue:   #B8D8F0;
+    --pastel-cream:  #F8F0C8;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  ::selection {
+    background-color: var(--color-accent-light);
+    color: var(--color-text);
+  }
+
+  /* Announcement bar gradient animation */
+  @keyframes gradientShift {
+    0%   { background-position: 0% 50% }
+    50%  { background-position: 100% 50% }
+    100% { background-position: 0% 50% }
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--color-bg);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-border);
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-muted);
+  }
+}
+
+@layer components {
+  /* Button press effect */
+  .btn-press {
+    @apply transition-transform duration-75 active:scale-[0.97];
+  }
+
+  /* Product image hover zoom */
+  .img-zoom {
+    @apply transition-transform duration-700 ease-out group-hover:scale-105;
+  }
+
+  /* Container */
+  .container-zen {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Divider */
+  .divider {
+    @apply border-t border-zen-200;
+  }
+
+  /* Focus ring */
+  .focus-zen {
+    @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-gold-500 focus-visible:ring-offset-2;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .animate-in {
+    animation: fade-in 0.4s ease-out forwards;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
