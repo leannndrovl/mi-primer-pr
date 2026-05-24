@@ -21,7 +21,7 @@ export default function TerminosPage() {
               operado bajo la marca comercial Zennela. Al realizar un pedido aceptas estas condiciones en su totalidad.
             </p>
             <p className="mt-2">
-              Contacto: <a href="mailto:leandrovaldivia1409@gmail.com" className="text-zen-800 underline">leandrovaldivia1409@gmail.com</a>
+              Contacto: <a href="/pages/contacto" className="text-zen-800 underline">Formulario de contacto</a>
             </p>
           </section>
 
@@ -87,9 +87,9 @@ export default function TerminosPage() {
             <h2 className="text-xl font-semibold text-zen-800 mb-3">6. Cancelaciones</h2>
             <p>
               Puedes cancelar tu pedido siempre que no haya sido enviado todavía. Para solicitar
-              la cancelación, contacta con nosotros lo antes posible en{' '}
-              <a href="mailto:leandrovaldivia1409@gmail.com" className="text-zen-800 underline">
-                leandrovaldivia1409@gmail.com
+              la cancelación,{' '}
+              <a href="/pages/contacto" className="text-zen-800 underline">
+                contáctanos a través de nuestra página de contacto
               </a>{' '}
               indicando tu número de pedido.
             </p>
@@ -99,9 +99,9 @@ export default function TerminosPage() {
             <h2 className="text-xl font-semibold text-zen-800 mb-3">7. Productos defectuosos o incorrectos</h2>
             <p>
               Si recibes un producto defectuoso o diferente al pedido, contacta con nosotros en un
-              plazo de 48 horas desde la recepción en{' '}
-              <a href="mailto:leandrovaldivia1409@gmail.com" className="text-zen-800 underline">
-                leandrovaldivia1409@gmail.com
+              plazo de 48 horas desde la recepción{' '}
+              <a href="/pages/contacto" className="text-zen-800 underline">
+                a través de nuestra página de contacto
               </a>{' '}
               adjuntando fotos del producto y tu número de pedido. Gestionaremos una solución lo antes posible.
             </p>
@@ -136,9 +136,9 @@ export default function TerminosPage() {
           <section>
             <h2 className="text-xl font-semibold text-zen-800 mb-3">11. Contacto</h2>
             <p>
-              Para cualquier consulta relacionada con estas condiciones, puedes contactarnos en:{' '}
-              <a href="mailto:leandrovaldivia1409@gmail.com" className="text-zen-800 underline">
-                leandrovaldivia1409@gmail.com
+              Para cualquier consulta relacionada con estas condiciones,{' '}
+              <a href="/pages/contacto" className="text-zen-800 underline">
+                contáctanos a través de nuestra página de contacto
               </a>
             </p>
           </section>

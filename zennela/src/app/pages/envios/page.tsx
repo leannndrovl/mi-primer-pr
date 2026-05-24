@@ -69,10 +69,9 @@ export default function EnviosPage() {
           <section>
             <h2 className="text-xl font-semibold text-zen-800 mb-3">Problemas con tu envío</h2>
             <p>
-              Si tu pedido tarda más de lo esperado o tienes cualquier problema con la entrega,
-              contáctanos en{' '}
-              <a href="mailto:leandrovaldivia1409@gmail.com" className="text-zen-800 underline">
-                leandrovaldivia1409@gmail.com
+              Si tu pedido tarda más de lo esperado o tienes cualquier problema con la entrega,{' '}
+              <a href="/pages/contacto" className="text-zen-800 underline">
+                contáctanos a través de nuestra página de contacto
               </a>{' '}
               indicando tu número de pedido y te ayudaremos lo antes posible.
             </p>

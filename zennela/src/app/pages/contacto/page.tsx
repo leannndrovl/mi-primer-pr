@@ -18,8 +18,8 @@ export default function ContactoPage() {
             <div className="mb-3 mx-auto flex h-10 w-10 items-center justify-center rounded-xl bg-zen-50">
               <Mail size={18} className="text-zen-600" />
             </div>
-            <h3 className="font-semibold text-zen-800 mb-1">Email</h3>
-            <p className="text-sm text-zen-500">leandrovaldivia1409@gmail.com</p>
+            <h3 className="font-semibold text-zen-800 mb-1">Formulario web</h3>
+            <p className="text-sm text-zen-500">Rellena el formulario y te respondemos</p>
           </div>
 
           <div className="rounded-2xl border border-zen-200 bg-white p-5 text-center">
@@ -113,10 +113,7 @@ export default function ContactoPage() {
           </form>
 
           <p className="mt-4 text-center text-xs text-zen-400">
-            También puedes escribirnos directamente a{' '}
-            <a href="mailto:leandrovaldivia1409@gmail.com" className="text-zen-600 underline">
-              leandrovaldivia1409@gmail.com
-            </a>
+            Te responderemos en menos de 24 horas en días laborables.
           </p>
         </div>
       </div>

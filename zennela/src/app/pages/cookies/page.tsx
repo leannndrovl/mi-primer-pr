@@ -71,9 +71,9 @@ export default function CookiesPage() {
           <section>
             <h2 className="text-xl font-semibold text-zen-800 mb-3">Más información</h2>
             <p>
-              Para cualquier consulta sobre nuestra política de cookies, escríbenos a{' '}
-              <a href="mailto:leandrovaldivia1409@gmail.com" className="text-zen-800 underline">
-                leandrovaldivia1409@gmail.com
+              Para cualquier consulta sobre nuestra política de cookies,{' '}
+              <a href="/pages/contacto" className="text-zen-800 underline">
+                contáctanos a través de nuestra página de contacto
               </a>.
             </p>
           </section>

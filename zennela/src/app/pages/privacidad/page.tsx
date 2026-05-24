@@ -22,7 +22,7 @@ export default function PrivacidadPage() {
             <ul className="mt-3 space-y-1 list-none pl-0">
               <li><strong className="text-zen-700">Marca comercial:</strong> Zennela</li>
               <li><strong className="text-zen-700">Sitio web:</strong> zennela.com</li>
-              <li><strong className="text-zen-700">Correo electrónico:</strong> leandrovaldivia1409@gmail.com</li>
+              <li><strong className="text-zen-700">Contacto:</strong> <a href="/pages/contacto" className="text-zen-800 underline">Formulario de contacto</a></li>
             </ul>
           </section>
 
@@ -91,9 +91,9 @@ export default function PrivacidadPage() {
               <li><strong className="text-zen-700">Limitación:</strong> solicitar la restricción del tratamiento</li>
             </ul>
             <p className="mt-3">
-              Para ejercer cualquiera de estos derechos, escríbenos a{' '}
-              <a href="mailto:leandrovaldivia1409@gmail.com" className="text-zen-800 underline">
-                leandrovaldivia1409@gmail.com
+              Para ejercer cualquiera de estos derechos,{' '}
+              <a href="/pages/contacto" className="text-zen-800 underline">
+                contáctanos a través de nuestra página de contacto
               </a>.
               También puedes presentar una reclamación ante la{' '}
               <strong className="text-zen-700">Agencia Española de Protección de Datos (AEPD)</strong> en{' '}
@@ -115,9 +115,9 @@ export default function PrivacidadPage() {
           <section>
             <h2 className="text-xl font-semibold text-zen-800 mb-3">9. Contacto</h2>
             <p>
-              Para cualquier consulta sobre esta política de privacidad, puedes contactarnos en:{' '}
-              <a href="mailto:leandrovaldivia1409@gmail.com" className="text-zen-800 underline">
-                leandrovaldivia1409@gmail.com
+              Para cualquier consulta sobre esta política de privacidad,{' '}
+              <a href="/pages/contacto" className="text-zen-800 underline">
+                contáctanos a través de nuestra página de contacto
               </a>
             </p>
           </section>

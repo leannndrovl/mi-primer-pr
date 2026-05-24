@@ -21,7 +21,7 @@ const FAQS = [
   },
   {
     q: '¿Puedo cancelar mi pedido?',
-    a: 'Puedes cancelar tu pedido siempre que no haya sido enviado todavía. Contáctanos lo antes posible en leandrovaldivia1409@gmail.com indicando tu número de pedido y te ayudaremos a gestionarlo.',
+    a: 'Puedes cancelar tu pedido siempre que no haya sido enviado todavía. Contáctanos lo antes posible a través de nuestra página de contacto indicando tu número de pedido y te ayudaremos a gestionarlo.',
   },
   {
     q: '¿Qué métodos de pago aceptáis?',
@@ -33,7 +33,7 @@ const FAQS = [
   },
   {
     q: '¿Qué hago si recibo un producto defectuoso?',
-    a: 'Si recibes un producto defectuoso o diferente al pedido, contáctanos en un plazo de 48 horas desde la recepción en leandrovaldivia1409@gmail.com, adjuntando fotos del producto y tu número de pedido. Gestionaremos una solución lo antes posible.',
+    a: 'Si recibes un producto defectuoso o diferente al pedido, contáctanos en un plazo de 48 horas desde la recepción a través de nuestra página de contacto, adjuntando fotos del producto y tu número de pedido. Gestionaremos una solución lo antes posible.',
   },
   {
     q: '¿El llavero hace ruido al usarlo?',
@@ -75,7 +75,7 @@ export default function FaqPage() {
           <p className="text-zen-600 mb-1 font-medium">¿No encuentras lo que buscas?</p>
           <p className="text-sm text-zen-500 mb-4">Escríbenos y te respondemos en menos de 24 horas.</p>
           <a
-            href="mailto:leandrovaldivia1409@gmail.com"
+            href="/pages/contacto"
             className="inline-flex items-center gap-2 rounded-xl bg-zen-900 px-5 py-2.5 text-sm font-medium text-white hover:bg-zen-800 transition-colors"
           >
             Contactar

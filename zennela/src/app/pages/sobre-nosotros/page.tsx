@@ -86,9 +86,9 @@ export default function SobreNosotrosPage() {
           <section>
             <h2 className="text-xl font-semibold text-zen-800 mb-3">¿Tienes alguna pregunta?</h2>
             <p>
-              Estaremos encantados de ayudarte. Escríbenos a{' '}
-              <a href="mailto:leandrovaldivia1409@gmail.com" className="text-zen-800 underline">
-                leandrovaldivia1409@gmail.com
+              Estaremos encantados de ayudarte.{' '}
+              <a href="/pages/contacto" className="text-zen-800 underline">
+                Contáctanos a través de nuestra página de contacto
               </a>{' '}
               y te responderemos en menos de 24 horas.
             </p>
