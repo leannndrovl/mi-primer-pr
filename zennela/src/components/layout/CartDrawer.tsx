@@ -9,7 +9,7 @@ import { useCart } from '@/hooks/useCart'
 import { formatPrice, FREE_SHIPPING_THRESHOLD } from '@/lib/utils'
 
 export function CartDrawer() {
-  const { cart, isOpen, isLoading, closeCart, updateItem, removeItem, checkoutUrl, subtotal } =
+  const { cart, isOpen, isLoading, closeCart, updateItem, checkoutUrl, subtotal } =
     useCart()
   const overlayRef = useRef<HTMLDivElement>(null)
 

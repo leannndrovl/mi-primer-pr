@@ -47,7 +47,7 @@ export function useCart() {
     async (merchandiseId: string, quantity = 1) => {
       setLoading(true)
       try {
-        let currentCartId = cartId ?? getPersistedCartId()
+        const currentCartId = cartId ?? getPersistedCartId()
 
         if (!currentCartId) {
           const newCart = await createCart(merchandiseId, quantity)
