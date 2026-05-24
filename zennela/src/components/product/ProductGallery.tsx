@@ -121,15 +121,16 @@ export function ProductGallery({ images, title }: ProductGalleryProps) {
               animate={{ scale: 1,    opacity: 1 }}
               exit={{ scale: 0.92,    opacity: 0 }}
               transition={{ duration: 0.2 }}
-              className="relative max-h-[88vh] max-w-[88vw] aspect-square"
+              className="flex items-center justify-center"
               onClick={(e) => e.stopPropagation()}
             >
               <Image
                 src={images[active].url}
                 alt={images[active].altText ?? title}
-                fill
+                width={900}
+                height={900}
                 sizes="88vw"
-                className="object-contain"
+                className="object-contain max-h-[88vh] max-w-[88vw] w-auto h-auto rounded-xl"
               />
             </motion.div>
           </motion.div>
