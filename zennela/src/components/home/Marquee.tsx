@@ -14,8 +14,8 @@ function MarqueeTrack({ speed = 40 }: { speed?: number }) {
 
   return (
     <div
-      className="flex items-center whitespace-nowrap"
-      style={{ animation: `marquee ${speed}s linear infinite` }}
+      className="flex items-center whitespace-nowrap flex-shrink-0"
+      style={{ animation: `marquee ${speed}s linear infinite`, willChange: 'transform' }}
     >
       {items.map((item, i) => (
         <span key={i} className="inline-flex items-center">
