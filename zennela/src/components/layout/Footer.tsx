@@ -3,9 +3,7 @@ import Link from 'next/link'
 const LINKS = {
   Tienda: [
     { href: '/collections/all', label: 'Todos los productos' },
-    { href: '/collections/llaveros', label: 'Llaveros click' },
-    { href: '/collections/novedades', label: 'Novedades' },
-    { href: '/collections/ofertas', label: 'Ofertas' },
+    { href: '/collections/all', label: 'Llaveros click' },
   ],
   Ayuda: [
     { href: '/pages/envios', label: 'Información de envíos' },
