@@ -21,8 +21,9 @@ import {
   UPDATE_CART_MUTATION,
 } from './mutations'
 
-const DOMAIN = process.env.NEXT_PUBLIC_SHOPIFY_STORE_DOMAIN!
-const TOKEN = process.env.NEXT_PUBLIC_SHOPIFY_STOREFRONT_ACCESS_TOKEN!
+// Strip BOM that Windows/PowerShell can inject into env vars
+const DOMAIN = (process.env.NEXT_PUBLIC_SHOPIFY_STORE_DOMAIN ?? '').replace(/^﻿/, '').trim()
+const TOKEN = (process.env.NEXT_PUBLIC_SHOPIFY_STOREFRONT_ACCESS_TOKEN ?? '').replace(/^﻿/, '').trim()
 const API_URL = `https://${DOMAIN}/api/2024-01/graphql.json`
 
 async function shopifyFetch<T>({
