@@ -36,12 +36,11 @@ export function ProductView({ product, initialSearchParams }: ProductViewProps) 
     [product, selectedOptions, defaultVariant]
   )
 
-  // La imagen de la variante seleccionada va primero en la galería
+  // Solo muestra la imagen de la variante seleccionada
   const galleryImages = useMemo((): ShopifyImage[] => {
     const variantImg = selectedVariant?.image ?? null
-    if (!variantImg) return product.images
-    const rest = product.images.filter((img) => img.url !== variantImg.url)
-    return [variantImg, ...rest]
+    if (!variantImg) return product.images.slice(0, 1)
+    return [variantImg]
   }, [selectedVariant, product.images])
 
   return (
